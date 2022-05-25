@@ -17,6 +17,9 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 
+import com.hmsecosystem.calculator.App;
+import com.hmsecosystem.calculator.R;
+
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
@@ -26,14 +29,14 @@ import java.security.SignatureException;
 import java.security.spec.InvalidKeySpecException;
 import java.security.spec.X509EncodedKeySpec;
 
-public class CipherUtil {
+public class CipherUtil{
     private static final String TAG = "CipherUtil";
 
     // The SHA256WithRSA algorithm.
     private static final String SIGN_ALGORITHMS = "SHA256WithRSA";
 
-    // The Iap public key of this App.
-    private static final String PUBLIC_KEY = "xxxxx";
+    // The Iap public key of this com.hmsecosystem.calculator.App.
+    private static final String PUBLIC_KEY = App.getAppResources().getString(R.string.PUBLIC_KEY);
 
     /**
      * The method to check the signature for the data returned from the interface.

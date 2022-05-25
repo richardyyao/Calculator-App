@@ -38,6 +38,6 @@
 
     <string name="upgrade">Remove Ads</string>
     <string name="click_to_retry">Retry</string>
-    <string name="hidden_level_has_been_purchsed">The ads is removed.</string>
+    <string name="remove_ads_has_been_purchased">Ads are removed.</string>
 
 </resources>

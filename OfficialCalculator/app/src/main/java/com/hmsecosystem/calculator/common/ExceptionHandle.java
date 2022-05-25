@@ -17,7 +17,6 @@ import static android.content.ContentValues.TAG;
 
 import android.app.Activity;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.huawei.hms.iap.IapApiException;
 import com.huawei.hms.iap.entity.OrderStatusCode;
@@ -44,7 +43,6 @@ public class ExceptionHandle {
                 IapRequestHelper.startResolutionForResult(activity, iapApiException.getStatus(), Constants.REQ_CODE_LOGIN);
             }
         } else {
-            Toast.makeText(activity, "external error", Toast.LENGTH_SHORT).show();
             Log.e(TAG, e.getMessage());
         }
         return SOLVED;

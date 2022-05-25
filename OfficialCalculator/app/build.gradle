@@ -14,6 +14,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.huawei.agconnect'
 
+def String keystorePath = KEYSTORE_PATH
+def String keyAliasString = KEY_ALIAS
+def String keyPassString = KEY_PASSWORD
+def String storePassString = STORE_PASSWORD
+
 android {
     compileSdkVersion 29
     defaultConfig {
@@ -26,10 +31,10 @@ android {
     }
     signingConfigs {
         config {
-            storeFile file('./xxxxx.jks')
-            keyAlias 'xxxxx'
-            keyPassword 'xxxxx'
-            storePassword 'xxxxx'
+            storeFile file(keystorePath)
+            keyAlias keyAliasString
+            keyPassword keyPassString
+            storePassword storePassString
         }
     }
 

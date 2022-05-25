@@ -13,6 +13,7 @@
 
 package com.hmsecosystem.calculator;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -114,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 (screen.getText().length() == 1 && screen.getText().charAt(0) == '0'))
             screen.setText("");
         screen.setText(screen.getText() + "0");
-        moveCarot();
+        moveCaret();
     }
 
     public void add1(View v) {
@@ -123,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
                 screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "1");
-        moveCarot();
+        moveCaret();
     }
 
     public void add2(View v) {
@@ -132,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "2");
-        moveCarot();
+        moveCaret();
     }
 
     public void add3(View v) {
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "3");
-        moveCarot();
+        moveCaret();
     }
 
     public void add4(View v) {
@@ -150,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "4");
-        moveCarot();
+        moveCaret();
     }
 
     public void add5(View v) {
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "5");
-        moveCarot();
+        moveCaret();
     }
 
     public void add6(View v) {
@@ -168,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "6");
-        moveCarot();
+        moveCaret();
     }
 
     public void add7(View v) {
@@ -177,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "7");
-        moveCarot();
+        moveCaret();
     }
 
     public void add8(View v) {
@@ -186,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "8");
-        moveCarot();
+        moveCaret();
     }
 
     public void add9(View v) {
@@ -195,7 +196,7 @@ public class MainActivity extends AppCompatActivity {
                 || screen.getText().toString().compareToIgnoreCase("Infinity") == 0)
             screen.setText("");
         screen.setText(screen.getText() + "9");
-        moveCarot();
+        moveCaret();
     }
 
     public void sum(View v) {
@@ -206,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
             screen.setText(screen.getText().toString() + " + ");
             operator = true;
             hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -219,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
             screen.setText(screen.getText() + " - ");
             operator = true;
             hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -232,7 +233,7 @@ public class MainActivity extends AppCompatActivity {
             screen.setText(screen.getText() + " / ");
             operator = true;
             hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -245,7 +246,7 @@ public class MainActivity extends AppCompatActivity {
             screen.setText(screen.getText().toString() + " * ");
             operator = true;
             hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -260,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
                 hasdot = false;
             }
             screen.setText(screen.getText() + answer);
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -275,7 +276,7 @@ public class MainActivity extends AppCompatActivity {
                 hasdot = false;
             }
             screen.setText(screen.getText() + answer);
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -294,7 +295,7 @@ public class MainActivity extends AppCompatActivity {
                 screen.setText(screen.getText() + "0");
             }
             hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
     public void plusminus(View v) {
@@ -308,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
                 hasdot = false;
             }
             screen.setText(screen.getText() + d);
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -318,14 +319,14 @@ public class MainActivity extends AppCompatActivity {
                 && screen.getText().toString().compareToIgnoreCase("Infinity") != 0) {
             screen.setText(screen.getText()+".");
             hasdot = true;
-            moveCarot();
+            moveCaret();
         }
     }
 
     public void clear(View v) {
         screen.setText("");
         hasdot = operator = false;
-        moveCarot();
+        moveCaret();
     }
 
     public void ce(View v) {
@@ -333,7 +334,7 @@ public class MainActivity extends AppCompatActivity {
             getLastDigitedNumber();
             hasdot = false;
             operator = true;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -366,7 +367,7 @@ public class MainActivity extends AppCompatActivity {
 
             if(lastChar == '.')
                 hasdot = false;
-            moveCarot();
+            moveCaret();
         }
     }
 
@@ -404,7 +405,7 @@ public class MainActivity extends AppCompatActivity {
                 // update screen
                 screen.setText(resp);
                 operator = false;
-                moveCarot();
+                moveCaret();
             }
         }
 
@@ -484,14 +485,14 @@ public class MainActivity extends AppCompatActivity {
         return (c == '+' || c == '-' || c == '/' || c == '*');
     }
 
-    public void moveCarot() {
+    public void moveCaret() {
         screen.setSelection(screen.getText().length());
     }
 
     private void loadDefaultBannerAd() {
         defaultBannerView = findViewById(R.id.hw_banner_view);
         defaultBannerView.setBannerRefresh(REFRESH_TIME);
-
+        defaultBannerView.setAdId(getString(R.string.ad_id_reward));
         AdParam adParam = new AdParam.Builder().build();
         defaultBannerView.loadAd(adParam);
     }

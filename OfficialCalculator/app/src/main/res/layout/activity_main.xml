@@ -393,7 +393,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        hwads:adId="@string/banner_ad_id"
         hwads:bannerSize="BANNER_SIZE_320_50" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,9 +30,11 @@ app/src/test/
 google-services.json
 
 # AppGallery Services
-app/agconnect-services.json
-
-
+*agconnect-services.json
 
 # Android Profiling
 *.hprof
+
+# Secrets
+*config.xml
+app/gradle.properties
