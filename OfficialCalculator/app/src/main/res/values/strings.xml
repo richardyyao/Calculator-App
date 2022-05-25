@@ -1,0 +1,43 @@
+<!--
+    Copyright 2021. Futurewei Technologies Inc. All rights reserved.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+    http:  www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<resources>
+    <string name="app_name">My Calculator</string>
+    <string name="square_root_symbol">\u221a</string>
+    <string name="del_button">\u232b</string>
+    <string name="power2">x\u00B2</string>
+    <string name="plus_minus">\u207A\u2215\u208B</string>
+
+    <string name="about">About</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+
+    <!-- Banner ad -->
+    <string name="banner_ad_id">testw6vs28auh3</string>
+<!--    <string name="banner_ad_id">x2324cxyzs</string>-->
+
+    <!--Interstitial ad-->
+    <string name="image_ad_id">teste9ih9j0rc3</string>
+<!--    <string name="image_ad_id">s8xm52l6wy</string>-->
+
+    <!-- reward ad -->
+    <string name="ad_id_reward">testx9dtjwj8hp</string>
+<!--    <string name="ad_id_reward">z1rggw00mk</string>-->
+
+    <!-- IAP -->
+
+    <string name="upgrade">Remove Ads</string>
+    <string name="click_to_retry">Retry</string>
+    <string name="hidden_level_has_been_purchsed">The ads is removed.</string>
+
+</resources>
