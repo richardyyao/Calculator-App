@@ -24,12 +24,12 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hmsecosystem.calculator.adapter.ProductListAdapter;
-import com.hmsecosystem.calculator.common.CipherUtil;
-import com.hmsecosystem.calculator.common.Constants;
-import com.hmsecosystem.calculator.common.ExceptionHandle;
-import com.hmsecosystem.calculator.common.IapApiCallback;
-import com.hmsecosystem.calculator.common.IapRequestHelper;
+import com.hmsecosystem.calculator.iap.ProductListAdapter;
+import com.hmsecosystem.calculator.iap.CipherUtil;
+import com.hmsecosystem.calculator.iap.Constants;
+import com.hmsecosystem.calculator.iap.ExceptionHandle;
+import com.hmsecosystem.calculator.iap.IapApiCallback;
+import com.hmsecosystem.calculator.iap.IapRequestHelper;
 import com.huawei.hms.iap.Iap;
 import com.huawei.hms.iap.IapClient;
 import com.huawei.hms.iap.entity.InAppPurchaseData;

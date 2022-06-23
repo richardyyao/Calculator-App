@@ -30,6 +30,30 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.hmsecosystem.calculator.CalculatorActivity"
+            android:label="@string/stdCal">
+        </activity>
+        <activity
+            android:name="com.hmsecosystem.calculator.converter.UnitConverter"
+            android:label="@string/unitCal">
+        </activity>
+        <activity
+            android:name="com.hmsecosystem.calculator.converter.UnitArea"
+            android:label="@string/title_activity_unit_area">
+        </activity>
+        <activity
+            android:name="com.hmsecosystem.calculator.converter.UnitLength"
+            android:label="@string/title_activity_unit_length">
+        </activity>
+        <activity
+            android:name="com.hmsecosystem.calculator.converter.UnitWeight"
+            android:label="@string/title_activity_unit_weight">
+        </activity>
+        <activity
+            android:name="com.hmsecosystem.calculator.converter.UnitTemperature"
+            android:label="@string/title_activity_unit_temperature">
+        </activity>
+        <activity
             android:name="com.hmsecosystem.calculator.NonConsumptionActivity"
             android:label="@string/upgrade">
         </activity>
