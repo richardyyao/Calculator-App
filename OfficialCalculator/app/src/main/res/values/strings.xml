@@ -69,6 +69,7 @@
     <string name="closeBracket">)</string>
     <string name="history">History</string>
 
+<!--    Unit Converter-->
     <string-array name="area">
         <item>Sq. Millimeter</item>
         <item>Sq. Centimeter</item>
