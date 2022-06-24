@@ -23,7 +23,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:screenOrientation="portrait">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,43 +32,53 @@
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.CalculatorActivity"
-            android:label="@string/stdCal">
+            android:label="@string/stdCal"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.converter.UnitConverter"
-            android:label="@string/unitCal">
+            android:label="@string/unitCal"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.converter.UnitArea"
-            android:label="@string/title_activity_unit_area">
+            android:label="@string/title_activity_unit_area"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.converter.UnitLength"
-            android:label="@string/title_activity_unit_length">
+            android:label="@string/title_activity_unit_length"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.converter.UnitWeight"
-            android:label="@string/title_activity_unit_weight">
+            android:label="@string/title_activity_unit_weight"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.converter.UnitTemperature"
-            android:label="@string/title_activity_unit_temperature">
+            android:label="@string/title_activity_unit_temperature"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.NonConsumptionActivity"
-            android:label="@string/upgrade">
+            android:label="@string/upgrade"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.AboutActivity"
-            android:label="@string/about">
+            android:label="@string/about"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.PrivacyPolicyActivity"
-            android:label="@string/privacy_policy">
+            android:label="@string/privacy_policy"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.hmsecosystem.calculator.TermsOfServiceActivity"
-            android:label="@string/terms_of_service">
+            android:label="@string/terms_of_service"
+            android:screenOrientation="portrait">
         </activity>
         <service android:name=".MyPushService" android:exported="false">
             <intent-filter>
