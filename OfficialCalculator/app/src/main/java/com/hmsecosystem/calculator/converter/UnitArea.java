@@ -17,6 +17,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -111,11 +113,14 @@ public class UnitArea extends AppCompatActivity {
                 break;
 
             case R.id.equal:
-                int item1=s1.getSelectedItemPosition();
-                int item2=s2.getSelectedItemPosition();
-                double value1=Double.parseDouble(e1.getText().toString());
-                double result=evaluate(item1,item2,value1);
-                e2.setText(result+"");
+                if(e1.length()!=0) {
+                    int item1 = s1.getSelectedItemPosition();
+                    int item2 = s2.getSelectedItemPosition();
+                    double value1 = Double.parseDouble(e1.getText().toString());
+                    double result = evaluate(item1, item2, value1);
+                    float result1 = (float) result;
+                    e2.setText(result1 + "");
+                }
                 break;
         }
     }

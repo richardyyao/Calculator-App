@@ -111,11 +111,14 @@ public class UnitWeight extends AppCompatActivity {
                 break;
 
             case R.id.equal:
-                int item1=s1.getSelectedItemPosition();
-                int item2=s2.getSelectedItemPosition();
-                double value1=Double.parseDouble(e1.getText().toString());
-                double result=evaluate(item1,item2,value1);
-                e2.setText(result+"");
+                if(e1.length()!=0) {
+                    int item1 = s1.getSelectedItemPosition();
+                    int item2 = s2.getSelectedItemPosition();
+                    double value1 = Double.parseDouble(e1.getText().toString());
+                    double result = evaluate(item1, item2, value1);
+                    float result1 = (float) result;
+                    e2.setText(result1 + "");
+                }
                 break;
         }
     }

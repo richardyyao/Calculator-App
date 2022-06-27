@@ -13,40 +13,13 @@
 
 package com.hmsecosystem.calculator;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.hmsecosystem.calculator.iap.CipherUtil;
-import com.hmsecosystem.calculator.iap.IapApiCallback;
-import com.hmsecosystem.calculator.iap.IapRequestHelper;
-import com.huawei.agconnect.config.AGConnectServicesConfig;
-import com.huawei.hms.aaid.HmsInstanceId;
-import com.huawei.hms.ads.AdListener;
-import com.huawei.hms.ads.AdParam;
-import com.huawei.hms.ads.HwAds;
-import com.huawei.hms.ads.InterstitialAd;
-import com.huawei.hms.ads.banner.BannerView;
-import com.huawei.hms.ads.reward.RewardAd;
-import com.huawei.hms.ads.reward.RewardAdLoadListener;
-import com.huawei.hms.ads.reward.RewardAdStatusListener;
-import com.huawei.hms.analytics.HiAnalytics;
-import com.huawei.hms.analytics.HiAnalyticsInstance;
-import com.huawei.hms.analytics.HiAnalyticsTools;
-import com.huawei.hms.iap.Iap;
-import com.huawei.hms.iap.IapClient;
-import com.huawei.hms.iap.entity.InAppPurchaseData;
-import com.huawei.hms.iap.entity.OwnedPurchasesResult;
-
-import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -371,6 +344,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 String resp = calculation(number, operators).toString();
                 hasdot = doesItHasADot(resp);
                 if(resp.charAt(resp.length() - 1) == '0' && resp.charAt(resp.length() - 2) == '.') {
+                    resp = resp.substring(0, resp.length() - 2);
                     hasdot = false;
                 }
                 // update screen
