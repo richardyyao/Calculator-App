@@ -24,9 +24,9 @@ android {
     defaultConfig {
         applicationId "com.hmsecosystem.calculator"
         minSdkVersion 19
-        targetSdkVersion 32
         versionCode 1
         versionName "1.0"
+        targetSdkVersion 32
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -52,23 +52,33 @@ android {
             debuggable true
         }
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.navigation:navigation-fragment:2.3.0'
+    implementation 'androidx.navigation:navigation-ui:2.3.0'
+    implementation 'com.google.android.material:material:1.1.0'
+    //HMS
     implementation 'com.huawei.hms:ads-lite:13.4.52.302'
     implementation 'com.huawei.hms:ads-consent:3.4.52.302'
     implementation 'com.huawei.hms:ads-identifier:3.4.39.302'
     implementation 'com.huawei.hms:push:6.3.0.304'
     implementation 'com.huawei.hms:hianalytics:6.3.2.300'
     implementation 'com.huawei.hms:iap:6.1.0.300'
-    implementation 'androidx.navigation:navigation-fragment:2.3.0'
-    implementation 'androidx.navigation:navigation-ui:2.3.0'
-    implementation 'com.google.android.material:material:1.1.0'
-
-    // appsflyer
     implementation 'com.appsflyer:af-android-sdk:6.3.2'
+    // appsflyer
     implementation 'com.android.installreferrer:installreferrer:2.2'
+    //GMS
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
 }
+
+//if (getGradle().getStartParameter().getTaskRequests().toString().contains("Hms")) {
+//    apply plugin: 'com.huawei.agconnect'
+//} else {
+//    apply plugin: 'com.google.gms.google-services'
+//}
+

@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -111,6 +112,11 @@ public class UnitWeight extends AppCompatActivity {
                 break;
 
             case R.id.equal:
+                String text=e1.getText().toString();
+                if(text.endsWith(".") & text.startsWith("."))
+                {
+                    displayResult("Please enter a valid number");
+                } else
                 if(e1.length()!=0) {
                     int item1 = s1.getSelectedItemPosition();
                     int item2 = s2.getSelectedItemPosition();
@@ -184,5 +190,8 @@ public class UnitWeight extends AppCompatActivity {
             }
             return temp;
         }
+    }
+    public void displayResult(String result) {
+        Toast.makeText(UnitWeight.this, result, Toast.LENGTH_SHORT).show();
     }
 }

@@ -16,6 +16,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -88,9 +89,8 @@ public class UnitArea extends AppCompatActivity {
                 break;
 
             case R.id.dot:
-                if (count1==0)
-                {
-                    e1.setText(e1.getText()+".");
+                if (count1 == 0 ) {
+                    e1.setText(e1.getText() + ".");
                     count1++;
                 }
                 break;
@@ -113,7 +113,12 @@ public class UnitArea extends AppCompatActivity {
                 break;
 
             case R.id.equal:
-                if(e1.length()!=0) {
+                String text=e1.getText().toString();
+                if(text.endsWith(".") & text.startsWith("."))
+                {
+                    displayResult("Please enter a valid number");
+                } else
+                if(e1.length() != 0 ) {
                     int item1 = s1.getSelectedItemPosition();
                     int item2 = s2.getSelectedItemPosition();
                     double value1 = Double.parseDouble(e1.getText().toString());
@@ -174,5 +179,8 @@ public class UnitArea extends AppCompatActivity {
             }
             return temp;
         }
+    }
+    public void displayResult(String result) {
+        Toast.makeText(UnitArea.this, result, Toast.LENGTH_SHORT).show();
     }
 }

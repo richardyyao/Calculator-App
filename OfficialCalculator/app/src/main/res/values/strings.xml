@@ -21,6 +21,8 @@
     <string name="privacy_policy">Privacy Policy</string>
     <string name="terms_of_service">Terms of Service</string>
 
+<!--    Huawei Ads-->
+
     <!-- Banner ad -->
     <string name="banner_ad_id">testw6vs28auh3</string>
 <!--    <string name="banner_ad_id">x2324cxyzs</string>-->
@@ -37,6 +39,17 @@
     <string name="upgrade">Remove Ads</string>
     <string name="click_to_retry">Retry</string>
     <string name="remove_ads_has_been_purchased">Ads are removed.</string>
+
+<!--    Google AdMob-->
+
+    <!-- Banner ad -->
+    <string name="banner_ad_id_gms">ca-app-pub-3940256099942544/6300978111</string>
+    <!-- reward ad -->
+    <string name="reward_ad_id_gms">ca-app-pub-3940256099942544/5224354917</string>
+    <!--Interstitial ad-->
+    <string name="interstitial_ad_id_gms">ca-app-pub-3940256099942544/1033173712</string>
+
+<!--    Calculator-->
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
@@ -93,7 +106,7 @@
 
     <string-array name="temperature">
         <item>Celsius</item>
-        <item>Farenheit</item>
+        <item>Fahrenheit</item>
         <item>Kelvin</item>
     </string-array>
 
