@@ -3,9 +3,11 @@ package com.hmsecosystem.calculator;
 import android.app.Application;
 import android.content.res.Resources;
 
+import androidx.multidex.MultiDexApplication;
+
 import com.appsflyer.AppsFlyerLib;
 
-public class App extends Application {
+public class App extends MultiDexApplication {
     private static Resources resources;
 
     @Override
