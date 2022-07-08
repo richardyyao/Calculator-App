@@ -89,5 +89,13 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9855074232083630~5490721900"/>
+
+        <service android:name="com.appsflyer.FirebaseMessagingServiceListener"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+
+        </service>
     </application>
 </manifest>

@@ -17,7 +17,7 @@ public class AttributionAppsFlyer {
        context = ctx;
     }
 
-    static AttributionAppsFlyer createAttributionAppsFlyer(Context ctx) {
+    public static AttributionAppsFlyer createAttributionAppsFlyer(Context ctx) {
         return new AttributionAppsFlyer(ctx);
     }
 
