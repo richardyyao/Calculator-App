@@ -64,8 +64,6 @@ import com.huawei.hms.iap.entity.InAppPurchaseData;
 import com.huawei.hms.iap.entity.OwnedPurchasesResult;
 
 import org.json.JSONException;
-
-import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -85,7 +83,6 @@ public class MainActivity extends AppCompatActivity {
     private String pushtoken = "";
 
     private IapClient mClient;
-    // Define a variable for the Analytics Kit instance.
     HiAnalyticsInstance instance;
 
     //Google AdMob
@@ -118,14 +115,7 @@ public class MainActivity extends AppCompatActivity {
                 public void onInitializationComplete(InitializationStatus initializationStatus) {}
             });
 
-            // Set your test devices. Check your logcat output for the hashed device ID to
-            // get test ads on a physical device. e.g.
-            // "Use RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("ABCDEF012345"))
-            // to get test ads on this device."
-            MobileAds.setRequestConfiguration(
-                    new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList("ABCDEF012345"))
-                            .build());
-
+            MobileAds.setRequestConfiguration(new RequestConfiguration.Builder().build());
             loadBannerAdGms();
             loadRewardedAdGms();
             loadInterstitialAdGms();
@@ -389,12 +379,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadBannerAdGms(){
-        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
-        // values/strings.xml.
         adViewBanner = findViewById(R.id.ad_view_banner);
         // Create an ad request.
         AdRequest adRequest = new AdRequest.Builder().build();
-
         // Start loading the ad in the background.
         adViewBanner.loadAd(adRequest);
     }
@@ -457,7 +444,6 @@ public class MainActivity extends AppCompatActivity {
                         // don't show the ad a second time.
                         rewardedAdHms = null;
                         Log.d(TAG, "onAdDismissedFullScreenContent");
-//                        MainActivity.this.loadRewardedAd();
                     }
                 });
 
