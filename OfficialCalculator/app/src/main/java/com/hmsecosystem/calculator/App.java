@@ -68,10 +68,9 @@ public class App extends MultiDexApplication {
 
         /* This API enables AppsFlyer to detect installations, sessions, and updates. */
         AppsFlyerLib.getInstance().init(AF_DEV_KEY , conversionListener , getApplicationContext());
-        AppsFlyerLib.getInstance().start(this);// .startTracking(this);
+        AppsFlyerLib.getInstance().start(this);
 
     }
-
 
 
     /* IGNORE - USED TO DISPLAY INSTALL DATA */

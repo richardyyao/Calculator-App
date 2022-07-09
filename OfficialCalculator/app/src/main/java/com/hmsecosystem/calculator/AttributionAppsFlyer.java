@@ -1,13 +1,18 @@
 package com.hmsecosystem.calculator;
 
+import static com.hmsecosystem.calculator.App.TAG;
+
 import android.content.Context;
+import android.util.Log;
 
 import com.appsflyer.AFInAppEventParameterName;
 import com.appsflyer.AFInAppEventType;
 import com.appsflyer.AppsFlyerLib;
+import com.appsflyer.oaid.OaidClient;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 public class AttributionAppsFlyer {
 
@@ -29,7 +34,6 @@ public class AttributionAppsFlyer {
         eventValue.put(AFInAppEventParameterName.CONTENT_TYPE, "category_a");
         eventValue.put(AFInAppEventParameterName.CONTENT_ID, "1234567");
         eventValue.put(AFInAppEventParameterName.CURRENCY, "USD");
-        //   AppsFlyerLib.getInstance().trackEvent(getApplicationContext(), AFInAppEventType.PURCHASE, eventValue);
 
         logInAppEvent();
 
@@ -37,8 +41,7 @@ public class AttributionAppsFlyer {
     public void logInAppEvent(){
 
         Add2Wishlist();
-        logRevenue();
-        logNegRevenue();
+        fetchOAID();
     }
     public void Add2Wishlist(){
         Map<String, Object> eventValues = new HashMap<>();
@@ -49,22 +52,18 @@ public class AttributionAppsFlyer {
                 AFInAppEventType.ADD_TO_WISH_LIST , eventValues);
     }
 
-    public void logRevenue(){
-//        Map<String, Object> eventValues = new HashMap<String, Object>();
-//        eventValues.put(AFInAppEventParameterName.CONTENT_ID, <ITEM_SKU>);
-//        eventValues.put(AFInAppEventParameterName.CONTENT_TYPE, <ITEM_TYPE>);
-//        eventValues.put(AFInAppEventParameterName.REVENUE, 200);
-//
-//        AppsFlyerLib.getInstance().logEvent(getApplicationContext(),
-//                AFInAppEventType.PURCHASE, eventValues);
-    }
 
-    public void logNegRevenue(){
-//        Map<String, Object> eventValues = new HashMap<String, Object>();
-//        eventValues.put(AFInAppEventParameterName.REVENUE, -1234.56);
-//        eventValues.put(AFInAppEventParameterName.CONTENT_ID,"1234567");
-//        AppsFlyerLib.getInstance().logEvent(getApplicationContext(),
-//                "cancel_purchase",
-//                eventValues);
+    public void fetchOAID(){
+        OaidClient.Info oaid = new OaidClient(context,1, TimeUnit.SECONDS).fetch();
+
+        if(oaid == null){
+            Log.d(TAG,"error can't fetch OAID");
+        }
+        else{
+             String id = oaid.getId();
+             String lat = oaid.getLat().toString();
+             Log.d(TAG,"oaid: "+ id + "value: "+ lat);
+
+        }
     }
 }
