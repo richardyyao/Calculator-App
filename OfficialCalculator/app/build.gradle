@@ -28,6 +28,7 @@ android {
         versionName "1.0"
         targetSdkVersion 32
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled = true
     }
     signingConfigs {
         config {
