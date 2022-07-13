@@ -16,10 +16,9 @@ buildscript {
         mavenCentral()
         maven { url 'https://developer.huawei.com/repo/' }
 
-        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.2.0'
+        classpath 'com.android.tools.build:gradle:7.2.1'
         classpath 'com.huawei.agconnect:agcp:1.6.4.300'
         classpath 'com.google.gms:google-services:4.3.13'
         // NOTE: Do not place your application dependencies here; they belong
@@ -33,7 +32,6 @@ allprojects {
         mavenCentral()
         maven { url 'https://developer.huawei.com/repo/' }
 
-        mavenCentral()
     }
 }
 
