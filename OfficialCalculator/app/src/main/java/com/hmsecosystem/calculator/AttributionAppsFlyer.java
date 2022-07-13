@@ -63,7 +63,6 @@ public class AttributionAppsFlyer {
              String id = oaid.getId();
              String lat = oaid.getLat().toString();
              Log.d(TAG,"oaid: "+ id + "value: "+ lat);
-
         }
     }
 }
