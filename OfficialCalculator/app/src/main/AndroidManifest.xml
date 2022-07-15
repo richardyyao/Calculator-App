@@ -88,7 +88,7 @@
         <meta-data android:name="com.huawei.hms.client.channel.androidMarket" android:value="false" />
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9855074232083630~5490721900"/>
+            android:value="ca-app-pub-7328300026305104~5595136447"/>
 
         <service android:name="com.appsflyer.FirebaseMessagingServiceListener"
             android:exported="false">

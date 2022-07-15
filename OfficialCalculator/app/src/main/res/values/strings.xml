@@ -52,17 +52,17 @@
     <!--test id-->
     <string name="banner_ad_id_gms">ca-app-pub-3940256099942544/6300978111</string>
     <!--real id-->
-<!--    <string name="banner_ad_id_gms">ca-app-pub-7857473971466854/7516590763</string>-->
+<!--    <string name="banner_ad_id_gms">ca-app-pub-7328300026305104/9181343456</string>-->
     <!-- reward ad -->
     <!--test id-->
     <string name="reward_ad_id_gms">ca-app-pub-3940256099942544/5224354917</string>
     <!--real id-->
-<!--    <string name="reward_ad_id_gms">ca-app-pub-7857473971466854/6203509099</string>-->
+<!--    <string name="reward_ad_id_gms">ca-app-pub-7328300026305104/7617830405</string>-->
     <!--Interstitial ad-->
     <!--test id-->
     <string name="interstitial_ad_id_gms">ca-app-pub-3940256099942544/1033173712</string>
     <!--real id-->
-<!--    <string name="interstitial_ad_id_gms">ca-app-pub-7857473971466854/2611748440</string>-->
+<!--    <string name="interstitial_ad_id_gms">ca-app-pub-7328300026305104/1028371322</string>-->
 
 <!--    Calculator-->
 

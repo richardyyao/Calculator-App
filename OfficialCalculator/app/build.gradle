@@ -27,8 +27,6 @@ android {
         versionCode 1
         versionName "1.0"
         targetSdkVersion 32
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
         multiDexEnabled = true
 
     }
@@ -90,10 +88,3 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:21.0.0'
 
 }
-
-//if (getGradle().getStartParameter().getTaskRequests().toString().contains("Hms")) {
-//    apply plugin: 'com.huawei.agconnect'
-//} else {
-//    apply plugin: 'com.google.gms.google-services'
-//}
-
