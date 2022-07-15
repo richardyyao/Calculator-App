@@ -22,47 +22,20 @@
     <string name="terms_of_service">Terms of Service</string>
 
 <!--    Huawei Ads-->
-
-    <!-- Banner ad -->
     <!--test id-->
     <string name="banner_ad_id">testw6vs28auh3</string>
-    <!--real id-->
-<!--    <string name="banner_ad_id">x2324cxyzs</string>-->
-
-    <!--Interstitial ad-->
-    <!--test id-->
     <string name="image_ad_id">teste9ih9j0rc3</string>
-    <!--real id-->
-<!--    <string name="image_ad_id">s8xm52l6wy</string>-->
-
-    <!-- reward ad -->
-    <!--test id-->
     <string name="ad_id_reward">testx9dtjwj8hp</string>
-    <!--real id-->
-<!--    <string name="ad_id_reward">z1rggw00mk</string>-->
+<!--    Google AdMob-->
+    <!--test id-->
+    <string name="banner_ad_id_gms">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="reward_ad_id_gms">ca-app-pub-3940256099942544/5224354917</string>
+    <string name="interstitial_ad_id_gms">ca-app-pub-3940256099942544/1033173712</string>
 
-    <!-- IAP -->
+<!-- Huawei IAP -->
     <string name="upgrade">Remove Ads</string>
     <string name="click_to_retry">Retry</string>
     <string name="remove_ads_has_been_purchased">Ads are removed.</string>
-
-<!--    Google AdMob-->
-
-    <!-- Banner ad -->
-    <!--test id-->
-    <string name="banner_ad_id_gms">ca-app-pub-3940256099942544/6300978111</string>
-    <!--real id-->
-<!--    <string name="banner_ad_id_gms">ca-app-pub-7328300026305104/9181343456</string>-->
-    <!-- reward ad -->
-    <!--test id-->
-    <string name="reward_ad_id_gms">ca-app-pub-3940256099942544/5224354917</string>
-    <!--real id-->
-<!--    <string name="reward_ad_id_gms">ca-app-pub-7328300026305104/7617830405</string>-->
-    <!--Interstitial ad-->
-    <!--test id-->
-    <string name="interstitial_ad_id_gms">ca-app-pub-3940256099942544/1033173712</string>
-    <!--real id-->
-<!--    <string name="interstitial_ad_id_gms">ca-app-pub-7328300026305104/1028371322</string>-->
 
 <!--    Calculator-->
 
