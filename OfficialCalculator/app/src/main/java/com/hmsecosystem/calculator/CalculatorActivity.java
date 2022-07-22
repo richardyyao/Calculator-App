@@ -18,8 +18,11 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.hmsecosystem.calculator.converter.UnitArea;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -237,6 +240,7 @@ public class CalculatorActivity extends AppCompatActivity {
                 screen.setText(screen.getText() + Long.toString(answer));
             } else {
                 screen.setText(screen.getText() + "0");
+                displayResult("Factorial values less than 21 only");
             }
             hasdot = false;
             moveCaret();
@@ -432,5 +436,9 @@ public class CalculatorActivity extends AppCompatActivity {
 
     public void moveCaret() {
         screen.setSelection(screen.getText().length());
+    }
+
+    public void displayResult(String result) {
+        Toast.makeText(CalculatorActivity.this, result, Toast.LENGTH_SHORT).show();
     }
 }
