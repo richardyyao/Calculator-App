@@ -14,22 +14,28 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.huawei.agconnect'
 
+ String keystorePath = KEYSTORE_PATH
+ String keyAliasString = KEY_ALIAS
+ String keyPassString = KEY_PASSWORD
+ String storePassString = STORE_PASSWORD
+
 android {
-    compileSdkVersion 29
+    compileSdkVersion 32
     defaultConfig {
         applicationId "com.hmsecosystem.calculator"
         minSdkVersion 19
-        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        targetSdkVersion 32
+        multiDexEnabled = true
+
     }
     signingConfigs {
         config {
-            storeFile file('./xxxxx.jks')
-            keyAlias 'xxxxx'
-            keyPassword 'xxxxx'
-            storePassword 'xxxxx'
+            storeFile file(keystorePath)
+            keyAlias keyAliasString
+            keyPassword keyPassString
+            storePassword storePassString
         }
     }
 
@@ -47,19 +53,26 @@ android {
             debuggable true
         }
     }
+    namespace 'com.hmsecosystem.calculator'
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.0'
+    implementation 'androidx.navigation:navigation-ui:2.5.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    //HMS
     implementation 'com.huawei.hms:ads-lite:13.4.52.302'
     implementation 'com.huawei.hms:ads-consent:3.4.52.302'
     implementation 'com.huawei.hms:ads-identifier:3.4.39.302'
     implementation 'com.huawei.hms:push:6.3.0.304'
     implementation 'com.huawei.hms:hianalytics:6.3.2.300'
     implementation 'com.huawei.hms:iap:6.1.0.300'
-    implementation 'androidx.navigation:navigation-fragment:2.3.0'
-    implementation 'androidx.navigation:navigation-ui:2.3.0'
-    implementation 'com.google.android.material:material:1.1.0'
+
+    //GMS
+    implementation 'com.google.android.gms:play-services-ads:21.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 }
